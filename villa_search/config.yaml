@@ -1,0 +1,49 @@
+search:
+  city: Marrakech
+  neighborhood: Targa
+  property_type: villa
+  min_bedrooms: 4
+  max_bedrooms: 5
+  style_keywords:
+    - moderne
+    - contemporain
+    - neuf
+    - standing
+    - design
+    - haut standing
+  exclude_keywords:
+    - riad
+    - traditional
+    - marocain traditionnel
+    - à rénover
+    - ruine
+  min_surface_m2: 200
+  max_price_mad: 15000000   # ajuste selon ton budget
+  min_price_mad: 1000000
+
+scoring:
+  # Poids pour le score final (total = 100)
+  price_weight: 40          # 40% du score
+  surface_weight: 25        # 25%
+  location_weight: 20       # 20%
+  style_weight: 15          # 15%
+
+  # Référence marché Targa (MAD/m²) - mis à jour automatiquement
+  market_price_per_m2: 12000   # prix médian actuel estimé
+
+email:
+  smtp_host: smtp.gmail.com
+  smtp_port: 587
+  sender: ton_email@gmail.com
+  recipients:
+    - ton_email@gmail.com
+  subject_prefix: "[Villa Marrakech]"
+
+scheduler:
+  run_at: "08:00"   # heure d'envoi du digest quotidien
+  timezone: Africa/Casablanca
+
+sources:
+  avito: true
+  mubawab: true
+  yakeey: true
